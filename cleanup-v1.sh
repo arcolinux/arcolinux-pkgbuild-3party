@@ -4,7 +4,7 @@ mv .git/config config
 
 rm -rf .git
 
-sh ./setup-git*
+git init
 
 mv config .git/config
 
