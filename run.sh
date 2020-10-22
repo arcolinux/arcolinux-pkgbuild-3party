@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 # checking if I have the latest files from github
+
+path=$(echo $HOME)
+
 tput setaf 2
 echo "################################################################"
 echo "Updating all third party applications"
@@ -69,7 +72,7 @@ echo "################################################################"
 tput sgr0
 echo
 
-cd /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party
+cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party
 
 ./1-git-v2+.sh
 ./2-sync-with-seedhost.sh
@@ -88,7 +91,7 @@ echo "################################################################"
 tput sgr0
 echo
 
-cd /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/
+cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/
 
 ./1-git-v3.sh
 ./2-sync-with-seedhost.sh
