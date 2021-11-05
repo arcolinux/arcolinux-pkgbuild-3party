@@ -64,12 +64,13 @@ font-manager-git
 gnome-shell-extension-appindicator-git
 gnome-shell-extension-pop-shell-git
 gnome-shell-extension-pop-shell-git
-libopenmpt
+legendary
 mintstick-git
 nodejs-nativefier
 nvtop-git
 numix-circle-icon-theme-git
 numix-gtk-theme-git
+obkey-git
 octopi
 oh-my-zsh-git
 oh-my-zsh-powerline-theme-git
