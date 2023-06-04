@@ -27,8 +27,10 @@
 #tput setaf 8 = light blue
 ##################################################################################################################
 
-# reset - commit your changes or stash them before you merge
-# git reset --hard - personal alias - grh
+echo "#################################################"
+echo "################   Removing .tar.gz"
+echo "#################################################"
+rm ArcoLinux*.tar.gz
 
 directories=(ArcoLinux_3th_party
 ArcoLinux_repo_iso
@@ -80,6 +82,12 @@ if grep -q master .git/config; then
 	echo "Using master"
 		git push -u origin master
 fi
+
+echo "#################################################"
+echo "################   Removing .tar.gz"
+echo "#################################################"
+
+rm ArcoLinux*.tar.gz
 
 echo "################################################################"
 echo "###################    Git Push Done      ######################"
