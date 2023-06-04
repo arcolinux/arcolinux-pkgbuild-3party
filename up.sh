@@ -31,6 +31,7 @@ echo "#################################################"
 echo "################   Removing .tar.gz"
 echo "#################################################"
 rm ArcoLinux*.tar.gz
+rm Special.tar.gz
 
 directories=(ArcoLinux_3th_party
 ArcoLinux_repo_iso
@@ -88,6 +89,7 @@ echo "################   Removing .tar.gz"
 echo "#################################################"
 
 rm ArcoLinux*.tar.gz
+rm Special.tar.gz
 
 echo "################################################################"
 echo "###################    Git Push Done      ######################"
