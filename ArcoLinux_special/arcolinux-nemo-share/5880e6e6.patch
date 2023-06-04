@@ -1,0 +1,30 @@
+From 5880e6e692823f45935018c4528ce086daa6c295 Mon Sep 17 00:00:00 2001
+From: Leigh Scott <leigh123linux@fedoraproject.org>
+Date: Tue, 23 Nov 2021 16:57:54 +0000
+Subject: [PATCH] Fix import error (#434)
+
+Fixes:
+
+$ nemo-preview
+Cjs-Message: 13:54:44.506: JS WARNING: [/usr/share/nemo-preview/js/viewers/gst.js 34]: Requiring Gtk but it has 3 versions available; use imports.gi.versions to pick one
+
+(nemo-preview-start:50721): Cjs-CRITICAL **: 13:54:44.507: JS ERROR: Error: Requiring Gtk, version none: Requiring namespace 'Gdk' version '4.0', but '3.0' is already loaded
+@/usr/share/nemo-preview/js/viewers/gst.js:34:13
+
+/usr/bin/nemo-preview: line 15: 50721 Segmentation fault      (core dumped) /usr/libexec/nemo-preview-start
+---
+ nemo-preview/src/js/viewers/gst.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/nemo-preview/src/js/viewers/gst.js b/nemo-preview/src/js/viewers/gst.js
+index 7f113b95..33216cc5 100644
+--- a/nemo-preview/src/js/viewers/gst.js
++++ b/nemo-preview/src/js/viewers/gst.js
+@@ -26,6 +26,7 @@
+  */
+ 
+ imports.gi.versions.ClutterGst = '3.0';
++imports.gi.versions.Gtk = '3.0';
+ imports.gi.versions.Gdk = '3.0';
+ const ClutterGst = imports.gi.ClutterGst;
+ const Clutter = imports.gi.Clutter;

@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Path
+Target = usr/share/app-info/xmls/*.xml.gz
+
+[Action]
+Description = fix archlinux-appstream-data for pamac
+When = PostTransaction
+Depends = gzip
+Exec = /usr/local/bin/fix-appstream-data.sh
+NeedsTargets

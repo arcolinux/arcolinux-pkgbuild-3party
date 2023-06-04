@@ -1,0 +1,12 @@
+makepkg -e ( so no extract )
+
+	argv[0] = "add";
+	argv[1] = "--long";
+	argv[2] = info->share_name;
+	argv[3] = info->path;
+	argv[4] = info->comment;
+	argv[5] = info->is_writable
+
+	in
+
+	/home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_special/arcolinux-nemo-share/src/nemo-extensions-5.2.0/nemo-share/src/shares.c

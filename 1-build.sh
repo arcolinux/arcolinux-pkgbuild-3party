@@ -10,7 +10,7 @@
 #tput setaf 8 = light blue
 
 
-set -e
+#set -e
 # checking if I have the latest files from github
 
 path=$(echo $HOME)
@@ -26,60 +26,18 @@ echo "################################################################"
 tput sgr0
 echo
 
+sudo echo "start"
+
 tput setaf 2
 echo "################################################################"
-echo "git pull all 3th party githubs"
+echo "Starting with 3th party githubs"
 echo "################################################################"
 tput sgr0
 echo
 
 cd ArcoLinux_3th_party
 
-./1-git-pull-all-githubs.sh
-
-tput setaf 12
-echo "################################################################"
-echo "################################################################"
-echo "################################################################"
-echo "Building the ArcoLinux 3th party packages if needed"
-echo "################################################################"
-echo "################################################################"
-echo "################################################################"
-tput sgr0
-echo
-
-./2-detect-version.sh
-
-cd ..
-echo
-echo
-tput setaf 12
-echo "################################################################"
-echo "################################################################"
-echo "################################################################"
-echo "git pull all Xlarge githubs"
-echo "################################################################"
-echo "################################################################"
-echo "################################################################"
-tput sgr0
-echo
-
-cd ArcoLinux_repo_xlarge
-
-./1-git-pull-all-githubs.sh
-
-tput setaf 12
-echo "################################################################"
-echo "################################################################"
-echo "################################################################"
-echo "Building if needed"
-echo "################################################################"
-echo "################################################################"
-echo "################################################################"
-tput sgr0
-echo
-
-./2-detect-version.sh
+./1-build-all*
 
 cd ..
 
@@ -89,84 +47,200 @@ echo
 echo "################################################################"
 echo "################################################################"
 echo "################################################################"
-echo "Putting everything online"
+echo "CAN I PUT 3TH PARTY ONLINE?"
 echo "################################################################"
 echo "################################################################"
 echo "################################################################"
 tput sgr0
 echo
 
-tput setaf 2
+read response
+
+if [[ "$response" == [yY] ]]; then
+
+	echo
+	tput setaf 2
+	echo
+	echo "################################################################"
+	echo "Putting all files of 3party repo online"
+	echo "################################################################"
+	echo
+	tput sgr0
+	echo
+
+	tput setaf 2
+	echo "################################################################"
+	echo "Going to 3th party repo"
+	echo "################################################################"
+	tput sgr0
+	echo
+
+	cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party
+
+	tput setaf 2
+	echo "################################################################"
+	echo "Putting on github"
+	echo "################################################################"
+	tput sgr0
+	echo
+
+	./1-git.sh
+
+	tput setaf 2
+	echo
+	echo "################################################################"
+	echo "Putting on seedhost"
+	echo "################################################################"
+	echo
+	tput sgr0
+	echo
+
+	./2-sync-with-seedhost.sh
+
+	tput setaf 2
+	echo
+	echo "################################################################"
+	echo "Putting on gitlab"
+	echo "################################################################"
+	echo
+	tput sgr0
+	echo
+
+	./3-git-files-to-gitlab.sh
+
+	tput setaf 2
+	echo
+	echo "################################################################"
+	echo "Putting on archive"
+	echo "################################################################"
+	echo
+	tput sgr0
+	echo
+
+	./8-sync-to-archive-seedhost.sh
+
+    else
+    
+    echo "#############################################################################################"
+    echo "Nothing has been changed."
+fi
+
+
+echo
+echo
+tput setaf 12
 echo "################################################################"
-echo "3th party repo"
+echo "################################################################"
+echo "################################################################"
+echo "Building all Xlarge packages"
+echo "################################################################"
+echo "################################################################"
 echo "################################################################"
 tput sgr0
 echo
 
-cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party
+cd $path/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_repo_xlarge/
 
-tput setaf 2
-echo "################################################################"
-echo "Putting on github"
-echo "################################################################"
-tput sgr0
+./1-build-all*
+
+cd ..
+
+tput setaf 12
 echo
-
-./1-git-v2+.sh
-mv ~/.cache/git ~/.cache/git-github
-
-tput setaf 2
 echo
 echo "################################################################"
-echo "PUtting on seedhost"
 echo "################################################################"
-echo
-tput sgr0
-echo
-
-./2-sync-with-seedhost.sh
-
-tput setaf 2
-echo
 echo "################################################################"
-echo "PUtting on archive"
+echo "CAN I PUT XLARGE PACKAGES ONLINE?"
 echo "################################################################"
-echo
-tput sgr0
-echo
-
-./3-sync-to-archive-seedhost.sh
-
-echo
-tput setaf 2
-echo
 echo "################################################################"
-echo "Xlarge"
-echo "################################################################"
-echo
-tput sgr0
-echo
-
-cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/
-
-./1-git-v3.sh
-./2-sync-with-seedhost.sh
-./3-sync-to-archive-seedhost.sh
-
-echo
-tput setaf 2
-echo "################################################################"
-echo "###################           Done        ######################"
-echo "################################################################"
-tput sgr0
-
-
-tput setaf 2
-echo "################################################################"
-echo "Moving .cache/git-github back"
 echo "################################################################"
 tput sgr0
 echo
 
-#rm -r ~/.cache/git
-mv ~/.cache/git-github ~/.cache/git
+read response
+
+
+if [[ "$response" == [yY] ]]; then
+
+	echo
+	tput setaf 2
+	echo
+	echo "################################################################"
+	echo "Putting all files of Xlarge repo online"
+	echo "################################################################"
+	echo
+	tput sgr0
+	echo
+
+	cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/
+
+	./1-git.sh
+	./2-sync-with-seedhost.sh
+	./8-sync-to-archive-seedhost.sh
+
+	echo
+	tput setaf 3
+	echo "################################################################"
+	echo "###################           Done        ######################"
+	echo "################################################################"
+	tput sgr0
+
+
+    else
+    
+    echo "#############################################################################################"
+    echo "Nothing has been changed."
+fi
+
+echo
+echo
+tput setaf 12
+echo "################################################################"
+echo "################################################################"
+echo "################################################################"
+echo "Running the core specials build? - 98"
+echo "################################################################"
+echo "################################################################"
+echo "################################################################"
+tput sgr0
+echo
+
+
+
+read response
+
+
+if [[ "$response" == [yY] ]]; then
+
+	cd $path/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/
+
+	sh 98-build-all-specials-core.sh
+
+fi
+
+echo
+echo
+tput setaf 12
+echo "################################################################"
+echo "################################################################"
+echo "################################################################"
+echo "Running the ALL specials build? - 99"
+echo "################################################################"
+echo "################################################################"
+echo "################################################################"
+tput sgr0
+echo
+
+
+
+read response
+
+
+if [[ "$response" == [yY] ]]; then
+
+	cd $path/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/
+
+	sh 98-build-all-specials-core.sh
+
+fi

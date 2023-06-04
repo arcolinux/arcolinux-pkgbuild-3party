@@ -1,0 +1,44 @@
+# Maintainer: Brad Fanella <cesura@archlinux.org>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=arcolinux-caja-share
+pkgver=1.26.0
+pkgrel=3
+pkgdesc="Caja extensions"
+url="https://mate-desktop.org"
+arch=('x86_64')
+license=('GPL')
+conflicts=('caja-share')
+depends=('caja' 'gettext' 'dbus-glib' 'gupnp' 'imagemagick' 'samba')
+makedepends=('python')
+source=("https://pub.mate-desktop.org/releases/${pkgver%.*}/$pkgbase-$pkgver.tar.xz")
+sha256sums=('f01539530840f8bd32ad119fab346cac214149dec74a69ae65a39442fdd8fc0f')
+
+build() {
+    cd caja-extensions-${pkgver}
+    PYTHON=/usr/bin/python2 ./configure \
+        --prefix=/usr \
+        --disable-gksu
+
+    #https://bugzilla.gnome.org/show_bug.cgi?id=656231
+    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+
+    make
+}
+
+# package_caja-extensions-common() {
+#     pkgdesc="Caja extensions (common files)"
+#     depends=()
+
+#     cd ${pkgbase}-${pkgver}
+#     make -C po DESTDIR="${pkgdir}" install
+# }
+package() {
+    pkgdesc="A Caja extension to quickly share a folder"
+    depends=('caja' 'caja-extensions-common' 'samba')
+    conflicts=('caja-share-gtk3')
+    replaces=('caja-share-gtk3')    
+
+    cd caja-extensions-${pkgver}
+    make -C share DESTDIR="${pkgdir}" install
+}

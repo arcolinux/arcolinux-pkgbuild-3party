@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+if (( $# >= 1 )); then
+    projects=( "$@" )
+else
+    readarray -t projects < <(grep -v '# ' build-order)
+fi
+
+for project in "${projects[@]}"; do
+    echo    ....
+    echo    ....
+    echo    ........................................... BUILDING: "$project"
+    echo    ....
+    echo    ....
+
+    pushd "$project" >/dev/null
+        mint-build
+    popd >/dev/null
+done

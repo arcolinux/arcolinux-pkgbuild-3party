@@ -1,0 +1,17 @@
+https://gitlab.manjaro.org/packages/
+
+make a copy first of all folder and put in OLD
+
+ git pull nr 1, 2, 3, 4
+ compare 1 with 5
+ compare 2 with 6
+
+ build first 4 and then 3
+ build first 6 and then 5
+ build 7 and test
+
+ no dev in repo !! just test it locally
+ 
+
+ snapd + snapd-glib from aur is no good
+

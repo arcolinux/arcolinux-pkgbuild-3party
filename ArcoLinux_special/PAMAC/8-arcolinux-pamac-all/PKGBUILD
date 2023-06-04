@@ -1,0 +1,37 @@
+# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+pkgname=arcolinux-pamac-all
+pkgver=10.5.0
+pkgrel=1
+pkgdesc="Pamac from Manjaro - packaged for ArcoLinux"
+arch=('any')
+url="https://arcolinux.info"
+license=('MIT' 'GPL3')
+provides=("${pkgname}")
+conflicts=("arcolinux-pamac-all-dev")
+replaces=('pamac-all' 'pamac-all-git' 'archlinux-appstream-data-pamac' 'pamac-classic' 'libpamac-full' 'libpamac-git')
+conflicts=('pamac-aur' 'pamac-aur-git' 'libpamac-aur')
+options=(!strip !emptydirs)
+install='readme.install'
+source=('fix-appstream-data.sh' 'fix-appstream-data.hook')
+sha256sums=('e9fe7c14d15cbce1d337749cf317e4460bce485b102b5c228b7efa479998d4fa'
+            'db3ea165e52977e2ad6dd8b7d2234f1f3d8ca616e2bfef6435075a7f3142967a')
+depends=(
+'libpamac>=11.4'
+'libhandy'
+'libnotify'
+'libsoup3'
+'libpamac-flatpak-plugin'
+'libpamac-snap-plugin'
+'pamac-cli'
+'pamac-gtk'
+'gtk3'
+'archlinux-appstream-data'
+)
+
+package() {
+	install -d -m755 ${pkgdir}/etc/pacman.d/hooks/
+	install -m644 ${srcdir}/fix-appstream-data.hook ${pkgdir}/etc/pacman.d/hooks/
+
+	install -d -m755 ${pkgdir}/usr/local/bin
+	install -m755 ${srcdir}/fix-appstream-data.sh ${pkgdir}/usr/local/bin
+}

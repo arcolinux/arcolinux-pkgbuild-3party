@@ -1,0 +1,175 @@
+nemo-emblems (5.2.0) una; urgency=medium
+
+  * 5.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 15 Nov 2021 13:29:51 +0000
+
+nemo-emblems (5.0.0) uma; urgency=medium
+
+  * 5.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 31 May 2021 12:43:26 +0100
+
+nemo-emblems (4.8.1) ulyssa; urgency=medium
+
+  * Hide symbolics and xapp-favorite
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 09 Dec 2020 12:17:59 +0000
+
+nemo-emblems (4.8.0) ulyssa; urgency=medium
+
+  * 4.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 26 Nov 2020 14:15:22 +0000
+
+nemo-emblems (4.6.0) ulyana; urgency=medium
+
+  * 4.6.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 13 May 2020 14:19:44 +0100
+
+nemo-emblems (4.4.0) tricia; urgency=medium
+
+  * 4.4.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 16 Nov 2019 15:58:16 +0100
+
+nemo-emblems (4.2.0) tina; urgency=medium
+
+  * 4.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 23 Jun 2019 15:51:10 +0200
+
+nemo-emblems (4.0.2) tessa; urgency=medium
+
+  * 4.0.2
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 15 Dec 2018 12:35:19 +0000
+
+nemo-emblems (4.0.1) tessa; urgency=medium
+
+  * 4.0.1
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 19 Nov 2018 09:53:36 +0000
+
+nemo-emblems (4.0.0) tessa; urgency=medium
+
+  * 4.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 01 Nov 2018 13:53:55 +0000
+
+nemo-emblems (3.8.0) tara; urgency=medium
+
+  * 3.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 01 May 2018 13:09:45 +0100
+
+nemo-emblems (3.6.0) sylvia; urgency=medium
+
+  * 3.6.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 24 Oct 2017 11:58:53 +0100
+
+nemo-emblems (3.4.1) sonya; urgency=medium
+
+  * Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 06 May 2017 15:20:45 +0100
+
+nemo-emblems (3.4.0) sonya; urgency=medium
+
+  * 3.4.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 04 May 2017 11:49:31 +0100
+
+nemo-emblems (3.2.3) serena; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 12 Dec 2016 14:36:34 +0000
+
+nemo-emblems (3.2.2) serena; urgency=medium
+
+  * 3.2.2
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 10 Dec 2016 12:59:07 +0000
+
+nemo-emblems (3.2.1) serena; urgency=medium
+
+  * Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 10 Nov 2016 09:59:30 +0000
+
+nemo-emblems (3.2.0) serena; urgency=medium
+
+  * 3.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 07 Nov 2016 11:32:15 +0000
+
+nemo-emblems (3.0.2) sarah; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 25 Jun 2016 12:18:55 +0100
+
+nemo-emblems (3.0.1) sarah; urgency=medium
+
+  * Fixed wrong version
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 14 Jun 2016 10:54:27 +0100
+
+nemo-emblems (3.0.0) sarah; urgency=medium
+
+  * 3.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 24 Apr 2016 12:49:42 +0100
+
+nemo-emblems (2.8.1) rosa; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 09 Nov 2015 10:32:22 +0000
+
+nemo-emblems (2.8.0) rosa; urgency=medium
+
+  * 2.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 19 Oct 2015 23:23:22 +0100
+
+nemo-emblems (2.6.0) rafaela; urgency=medium
+
+  * 2.6.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 02 Jun 2015 13:39:12 +0200
+
+nemo-emblems (2.4.3) rebecca; urgency=medium
+
+  * Don't show rabbitvcs emblems
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 22 Nov 2014 17:10:24 +0100
+
+nemo-emblems (2.4.2) rebecca; urgency=medium
+
+  * Don't show dropbox/ubuntuone emblems
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 21 Nov 2014 14:29:08 +0100
+
+nemo-emblems (2.4.1) rebecca; urgency=medium
+
+  * Updated translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Nov 2014 12:25:16 +0100
+
+nemo-emblems (2.4.0) rebecca; urgency=medium
+
+  * 2.4.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 01 Nov 2014 11:37:12 +0100
+
+nemo-emblems (0.0.1) qiana; urgency=high
+
+  * Initial release
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 24 Aug 2014 10:32:00 +0100
+

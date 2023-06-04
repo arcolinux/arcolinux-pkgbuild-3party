@@ -1,0 +1,3 @@
+option('gpg-check', type: 'boolean', value: true)
+option('libnotify', type: 'feature', value: 'enabled')
+option('sharing',   type: 'feature', value: 'disabled')

@@ -1,0 +1,126 @@
+nemo-compare (5.2.0) una; urgency=medium
+
+  * 5.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 15 Nov 2021 13:29:51 +0000
+
+nemo-compare (5.0.1) uma; urgency=medium
+
+  * 5.0.1
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 25 Jun 2021 17:09:01 +0100
+
+nemo-compare (5.0.0) uma; urgency=medium
+
+  * 5.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 31 May 2021 12:43:26 +0100
+
+nemo-compare (4.8.0) ulyssa; urgency=medium
+
+  * 4.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 26 Nov 2020 14:15:23 +0000
+
+nemo-compare (4.6.0) ulyana; urgency=medium
+
+  * 4.6.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 13 May 2020 14:19:46 +0100
+
+nemo-compare (4.4.0) tricia; urgency=medium
+
+  * 4.4.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 16 Nov 2019 15:58:15 +0100
+
+nemo-compare (4.2.0) tina; urgency=medium
+
+  * 4.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 23 Jun 2019 15:51:11 +0200
+
+nemo-compare (4.0.0) tessa; urgency=medium
+
+  * 4.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 01 Nov 2018 13:53:56 +0000
+
+nemo-compare (3.8.0) tara; urgency=medium
+
+  * 3.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 01 May 2018 13:09:46 +0100
+
+nemo-compare (3.6.0) sylvia; urgency=medium
+
+  * 3.6.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 24 Oct 2017 11:58:54 +0100
+
+nemo-compare (3.4.0) sonya; urgency=medium
+
+  * 3.4.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 04 May 2017 11:49:17 +0100
+
+nemo-compare (3.2.1) serena; urgency=medium
+
+  * 3.2.1
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 10 Dec 2016 12:59:43 +0000
+
+nemo-compare (3.2.0) serena; urgency=medium
+
+  * 3.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 07 Nov 2016 11:30:47 +0000
+
+nemo-compare (3.0.0) sarah; urgency=medium
+
+  * 3.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 24 Apr 2016 12:48:24 +0100
+
+nemo-compare (2.8.0) rosa; urgency=medium
+
+  * 2.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 19 Oct 2015 23:18:13 +0100
+
+nemo-compare (2.6.0) rafaela; urgency=medium
+
+  * 2.6.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 02 Jun 2015 13:40:43 +0200
+
+nemo-compare (2.4.0) rebecca; urgency=medium
+
+  * 2.4.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 01 Nov 2014 11:36:23 +0100
+
+nemo-compare (2.2.0) qiana; urgency=medium
+
+  * 2.2.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 12 Apr 2014 16:17:56 +0100
+
+nemo-compare (2.0.0) petra; urgency=low
+
+  * 2.0.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 30 Sep 2013 15:41:31 +0100
+
+nemo-compare (1.8.0) olivia; urgency=low
+
+  * 1.8.0
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 16 Apr 2013 10:40:56 +0100
+
+nemo-compare (1.0.0) unstable; urgency=low
+
+  * Port to Nemo
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 19 Oct 2012 20:00:00 -0500
+

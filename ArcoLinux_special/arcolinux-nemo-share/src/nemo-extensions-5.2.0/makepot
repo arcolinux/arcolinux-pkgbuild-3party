@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+pot="nemo-extensions.pot"
+
+potfiles_to_extract=(
+    nemo-audio-tab/nemo-extension/nemo-audio-tab.glade
+    nemo-image-converter/data/nemo-image-resize.ui
+    nemo-image-converter/data/nemo-image-rotate.ui
+    nemo-pastebin/data/nemo-pastebin-configurator.ui
+    nemo-repairer/src/encoding-dialog.ui
+    nemo-repairer/src/repair-dialog.ui
+    nemo-seahorse/tool/seahorse-multi-encrypt.xml
+    nemo-seahorse/tool/seahorse-notify.xml
+    nemo-seahorse/tool/seahorse-progress.xml
+    nemo-share/interfaces/share-dialog.ui
+)
+
+potfiles_extracted=( )
+for file in "${potfiles_to_extract[@]}"; do
+    intltool-extract --type=gettext/glade "$file"
+    potfiles_extracted+=( "${file}.h" )
+done
+
+potfiles_c=(
+    nemo-dropbox/src/*.c
+    nemo-dropbox/src/*.h
+    nemo-fileroller/src/*.c
+    nemo-fileroller/src/*.h
+    nemo-image-converter/data/*.ui.h
+    nemo-image-converter/src/*.c
+    nemo-image-converter/src/*.h
+    nemo-preview/src/*.c
+    nemo-preview/src/libnemo-preview/*.c
+    nemo-preview/src/libnemo-preview/*.h
+    nemo-repairer/src/*.c
+    nemo-repairer/src/*.h
+    nemo-repairer/src/*.ui.h
+    nemo-seahorse/nemo-ext/*.c
+    nemo-seahorse/nemo-ext/*.h
+    nemo-seahorse/tool/*.c
+    nemo-seahorse/tool/*.h
+    nemo-seahorse/tool/*.xml.h
+    nemo-share/interfaces/*.ui.h
+    nemo-share/src/*.c
+    nemo-share/src/*.h
+)
+potfiles_python=(
+    nemo-audio-tab/nemo-extension/*.glade.h
+    nemo-audio-tab/nemo-extension/*.py
+    nemo-compare/src/*.py
+    nemo-emblems/nemo-extension/*.py
+    nemo-media-columns/*.py
+    nemo-pastebin/*.py
+    nemo-pastebin/data/*.ui.h
+    nemo-terminal/src/*.py
+
+)
+potfiles_javascript=(
+    nemo-preview/src/js/*/*.js
+)
+
+xgettext --language=C           --keyword=_ --keyword=N_ --keyword=g_dngettext:2,3 --output="$pot" --join-existing "${potfiles_c[@]}"
+xgettext --language=JavaScript  --keyword=_ --keyword=N_ --output="$pot" --join-existing "${potfiles_javascript[@]}"
+xgettext --language=Python      --keyword=_ --keyword=N_ --output="$pot" --join-existing "${potfiles_python[@]}"
+
+rm -f "${potfiles_extracted[@]}"

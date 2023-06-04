@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+
+%:
+	dh $@ --buildsystem=meson
+
+override_dh_auto_configure:
+	dh_auto_configure -- -D gtk_doc=true --errorlogs
+
+# Don't generate a shlibs file for the plugin
+override_dh_makeshlibs:
+
+override_dh_strip:
+	dh_strip --dbg-package=python-nemo-dbg
