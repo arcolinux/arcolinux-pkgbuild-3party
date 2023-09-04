@@ -145,6 +145,7 @@ snapper-tools
 snapper-tools-git
 urxvt-resize-font-git
 ventoy-bin
+waybar-hyprland-git
 yay
 yay-bin
 yay-git

@@ -169,6 +169,11 @@ makepkglist="autotiling-git"
   cp -n *$search*pkg.tar.zst $destiny
   cp -n *$search*pkg.tar.zst.sig $destiny
 
+  if [[ $search == "leftwm" ]]; then
+    gpg --detach-sign leftwm-0*pkg.tar.zst
+    cp -n leftwm-0*pkg.tar.zst.sig $destiny
+  fi
+
   if [[ $search == "qtscrcpy" ]]; then
     gpg --detach-sign qtscrcp*pkg.tar.zst
     cp -n qtscrcp*pkg.tar.zst $destiny
@@ -235,5 +240,5 @@ else
   echo "#############################################################################################"
   tput setaf 2;echo "No need to build "$name;tput sgr0
   echo "#############################################################################################"
-  sleep 3
+  sleep 1
 fi

@@ -4,8 +4,7 @@ echo "Fill the array with the original folders first"
 
 # use ls -d */ > list to get the list of the created githubs and copy/paste in
 
-directories=(
-aic94xx-firmware/
+directories=(aic94xx-firmware/
 alacritty-themes/
 albert/
 alpm_octopi_utils/
@@ -52,6 +51,7 @@ chromium-widevine/
 ckbcomp/
 ckb-next-git/
 clapper/
+clementine/
 clipman/
 c-lolcat/
 cpu-x/
@@ -70,6 +70,7 @@ debtap/
 deezer/
 discord_arch_electron/
 disper/
+dk/
 downgrade/
 dracula-cursors-git/
 dracula-gtk-theme/
@@ -91,8 +92,8 @@ fingerprint-gui/
 flameshot-git/
 flavours/
 fluent-gtk-theme/
-fluent-icon-theme-git/
 fluent-kde-theme-git/
+fmt9/
 fnott-git/
 font-manager-git/
 fonts-tlwg/
@@ -171,7 +172,11 @@ lavalauncher/
 lastpass/
 layan-cursor-theme-git/
 layan-gtk-theme-git/
-layan-kde-git
+layan-kde-git/
+leftwm/
+leftwm-git/
+leftwm-config-git/
+leftwm-config/
 leftwm-theme-git/
 legendary/
 libart-lgpl/
@@ -183,7 +188,6 @@ libglade/
 libglibutil/
 libgksu/
 liboobs/
-libxcrypt-compat/
 lightdm-settings/
 lightdm-webkit-theme-aether/
 lightdm-webkit2-theme-reactive/
@@ -216,6 +220,7 @@ nerd-fonts-source-code-pro/
 newm-git/
 nixieclock/
 nodejs-nativefier/
+nomacs/
 nomacs-git/
 nordic-kde-git/
 nordtray-bin/
@@ -232,6 +237,7 @@ nwg-displays/
 nwg-dock-bin/
 nwg-drawer-bin/
 nwg-icon-picker/
+nwg-dock-hyprland-bin/
 nwg-launchers/
 nwg-look-bin/
 nwg-menu-bin/
@@ -397,6 +403,7 @@ snapper-rollback/
 snapper-support/
 snapper-tools/
 snapper-tools-git/
+spdlog-git/
 steamtinkerlaunch/
 sway-git/
 swaybg-git/
@@ -423,8 +430,8 @@ tauon-music-box/
 tempus-themes-xfce4-terminal-git/
 termite/
 the_platinum_searcher-bin/
-timeshift/
 timeshift-autosnap/
+#thunar-extended/
 thunar-shares-plugin/
 thunar-shares-plugin-git/
 toilet/
@@ -502,6 +509,7 @@ yay-git/
 yin-yang-git/
 xkb-switch-git/
 xkblayout-state-git/
+xfce4-panel-profiles/
 xfce4-terminal-base16-colors-git/
 xstarter/
 xmobar-dynamic/
@@ -532,6 +540,10 @@ git clone https://github.com/chaotic-aur/pkgbuild-chaotic-mirrorlist
 
 git clone https://github.com/xerolinux/xerolinux-mirrorlist
 
+git clone https://github.com/RebornOS-Developers/rebornos-mirrorlist.git
+
+git clone https://github.com/RebornOS-Developers/rebornos-keyring.git
+
 echo
 echo "###################################################################"
-echo "Check endeavouros keyring and mirror from time to time"
+echo "Check Rebornos, Endeavouros keyring and mirror from time to time"

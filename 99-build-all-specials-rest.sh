@@ -9,11 +9,7 @@
 #tput setaf 7 = gray
 #tput setaf 8 = light blue
 
-
 set -e
-# checking if I have the latest files from github
-
-path=$(echo $HOME)
 
 echo
 echo
@@ -28,7 +24,7 @@ echo "################################################################"
 tput sgr0
 echo
 
-cd ArcoLinux_special
+cd /home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_special
 
 tput setaf 2
 echo "################################################################"
@@ -39,7 +35,7 @@ echo
 
 count=0
 
-directories=(zsh-completions-git numix-circle-arc-icons-git)
+directories=(numix-circle-arc-icons-git)
 
 #for name in $(ls -d */); do
 for name in "${directories[@]}"; do
@@ -75,34 +71,21 @@ done
 
 cd ..
 
+echo
+echo
 tput setaf 2
 echo "################################################################"
 echo "################################################################"
 echo "################################################################"
-echo "Updating all third party applications"
+echo "Building ArcoLinux_3th_party"
 echo "################################################################"
 echo "################################################################"
 echo "################################################################"
 tput sgr0
 echo
 
-cd ArcoLinux_3th_party
+cd /home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_3th_party
 
-# tput setaf 2
-# echo "################################################################"
-# echo "git pull all 3th party githubs"
-# echo "################################################################"
-# tput sgr0
-# echo
-
-#./1-git-pull-all-githubs.sh
-
-tput setaf 2
-echo "################################################################"
-echo "Building if needed"
-echo "################################################################"
-tput sgr0
-echo
 
 tput setaf 2
 echo "################################################################"
@@ -114,38 +97,32 @@ echo
 count=0
 
 
-directories=(
+directories=(aic94xx-firmware
 alpm_octopi_utils
 betterlockscreen-git
-btrfs-assistant-git
-btrfsmaintenance-git
 bumblebee-status-git
+catch2-git
 ckb-next-git
 conky-lua-archers-git
 cxxmatrix-git
-cpufetch-git
 curseradio-git
 dracula-cursors-git
 dracula-icons-git
-edid-decode-git
 #enlightenment-arc-theme-git
 faba-icon-theme-git
 faba-mono-icons-git
 fancontrol-gui-git
 fastfetch-git
 find-the-command-git
-flameshot-git
-fluent-icon-theme-git
 fluent-kde-theme-git
 font-manager-git
 fundle-git
 fvwm3-git
+g4music
 gnome-shell-extension-appindicator-git
 gnome-shell-extension-pop-shell-git
 graphite-gtk-theme-git
 hardcode-fixer-git
-hyprland-git
-hyprland-nvidia-git
 i3lock-color
 imagewriter
 kripton-theme-git
@@ -157,10 +134,8 @@ layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
 la-capitaine-icon-theme-git
-leftwm-theme-git
 legendary
 lxqt-arc-dark-theme-git
-mintstick-git
 modprobed-db
 modprobed-db-git
 mono-zeroconf-git
@@ -173,23 +148,15 @@ numix-icon-theme-git
 numix-kde-theme-git
 nvtop-git
 octopi
-oh-my-zsh-git
-oh-my-zsh-powerline-theme-git
 openbox-arc-git
 openbox-themes-pambudi-git
 oranchelo-icon-theme-git
 orchis-kde-theme-git
 orchis-theme-git
 papirus-folders-git
-paru
-paru-bin
-paru-git
 perl-checkupdates-aur
 perl-linux-desktopfiles
 perl-www-aur
-picom-git
-picom-ibhagwan-git
-picom-jonaburg-git
 pikaur-git
 plymouth-git
 pop-launcher-git
@@ -206,12 +173,6 @@ sayonara-player
 screenkey-git
 sddm-sugar-candy-git
 simplicity-sddm-theme-git
-snap-pac-git
-snap-pac-grub
-snapper-rollback
-snapper-support
-snapper-tools
-snapper-tools-git
 sparklines-git
 speedtest-cli-git
 spotify-adblock-git
@@ -226,28 +187,19 @@ ttf-hactor
 tuxboot-git
 ufetch-git
 unimatrix-git
-urxvt-resize-font-git
-ventoy-bin
 vimix-icon-theme-git
 wacom-settings-git
 we10x-icon-theme-git
 whitesur-icon-theme-git
+xfce4-panel-profiles
 xfce4-screensaver-git
 xfce4-terminal-base16-colors-git
 xkblayout-state-git
 xkb-switch-git
 xlunch-git
 xtitle-git
-yay
-yay-bin
-yay-git
 yin-yang-git
 youtube-dl-gui-git
-zsh-autosuggestions-git
-zsh-fast-syntax-highlighting
-zsh-history-substring-search-git
-zsh-syntax-highlighting-git
-zsh-theme-powerlevel10k-git
 )
 
 #for name in $(ls -d */); do
@@ -289,27 +241,26 @@ tput setaf 2
 echo "################################################################"
 echo "################################################################"
 echo "################################################################"
-echo "git pull all Xlarge githubs"
+echo "Building all Xlarge githubs"
 echo "################################################################"
 echo "################################################################"
 echo "################################################################"
 tput sgr0
 echo
 
-cd ArcoLinux_repo_xlarge
+cd /home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_repo_xlarge
 
-#./1-git-pull-all-githubs.sh
 
 tput setaf 2
 echo "################################################################"
-echo "Building whatever"
+echo "Building ArcoLinux_repo_xlarge"
 echo "################################################################"
 tput sgr0
 echo
 
 count=0
 
-directories=()
+directories=(fluent-icon-theme-git nordzy-icon-theme-git)
 
 #for name in $(ls -d */); do
 for name in "${directories[@]}"; do
@@ -323,9 +274,6 @@ for name in "${directories[@]}"; do
 	tput sgr0;
 	cd $name
 
-	#clear cache and build
-	#sh 30-build*
-	#keep cacche and build (less bandwidth)
 	sh build*
 
 	tput setaf 3;
@@ -362,19 +310,18 @@ echo "################################################################"
 tput sgr0
 echo
 
-cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party
+cd /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/
+
+./up.sh
 
 tput setaf 2
 echo "################################################################"
-echo "Putting on all githubs"
+echo "Xlarge repo"
 echo "################################################################"
 tput sgr0
 echo
 
-./up.sh
-
-
-cd $path/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/
+cd /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_xlarge/
 
 ./up.sh
 

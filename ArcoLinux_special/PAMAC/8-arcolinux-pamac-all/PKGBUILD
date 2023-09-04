@@ -1,7 +1,7 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
 pkgname=arcolinux-pamac-all
-pkgver=10.5.0
-pkgrel=1
+pkgver=11.6.0
+pkgrel=0.2
 pkgdesc="Pamac from Manjaro - packaged for ArcoLinux"
 arch=('any')
 url="https://arcolinux.info"
@@ -16,7 +16,7 @@ source=('fix-appstream-data.sh' 'fix-appstream-data.hook')
 sha256sums=('e9fe7c14d15cbce1d337749cf317e4460bce485b102b5c228b7efa479998d4fa'
             'db3ea165e52977e2ad6dd8b7d2234f1f3d8ca616e2bfef6435075a7f3142967a')
 depends=(
-'libpamac>=11.4'
+'libpamac>=11.6'
 'libhandy'
 'libnotify'
 'libsoup3'

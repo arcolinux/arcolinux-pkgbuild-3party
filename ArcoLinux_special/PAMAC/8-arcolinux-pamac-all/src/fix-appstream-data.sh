@@ -1,1 +1,0 @@
-/home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_special/PAMAC/8-arcolinux-pamac-all/fix-appstream-data.sh

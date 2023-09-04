@@ -12,6 +12,7 @@ dropbox/
 electron13-bin/
 etcher-bin/
 flat-remix-git/
+fluent-icon-theme-git/
 freeoffice/
 freetube-bin/
 geekbench/

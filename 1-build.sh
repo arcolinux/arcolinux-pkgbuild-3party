@@ -13,6 +13,9 @@
 #set -e
 # checking if I have the latest files from github
 
+CHROOT=$HOME/Documents/chroot-archlinux
+arch-nspawn $CHROOT/root pacman -Syu --noconfirm
+
 path=$(echo $HOME)
 
 tput setaf 12
@@ -241,6 +244,6 @@ if [[ "$response" == [yY] ]]; then
 
 	cd $path/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/
 
-	sh 98-build-all-specials-core.sh
+	sh 99-build-all-specials-rest.sh
 
 fi
