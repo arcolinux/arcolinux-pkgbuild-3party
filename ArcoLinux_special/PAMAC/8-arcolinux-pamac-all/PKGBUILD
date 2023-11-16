@@ -1,7 +1,7 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
 pkgname=arcolinux-pamac-all
 pkgver=11.6.0
-pkgrel=0.2
+pkgrel=2
 pkgdesc="Pamac from Manjaro - packaged for ArcoLinux"
 arch=('any')
 url="https://arcolinux.info"

@@ -82,6 +82,7 @@ enpass-bin/
 envycontrol/
 esbuild/
 eww/
+eww-wayland/
 extremetuxracer/
 fancontrol-gui-git/
 fastfetch/
@@ -89,7 +90,6 @@ fastfetch-git/
 filebot/
 find-the-command-git/
 fingerprint-gui/
-flameshot-git/
 flavours/
 fluent-gtk-theme/
 fluent-kde-theme-git/
@@ -125,6 +125,7 @@ goverlay-bin/
 gputest/
 greetd/
 greetd-wlgreet/
+grimblast-git/
 grimshot/
 graphite-gtk-theme-git/
 gtk-sharp-2-git/
@@ -179,6 +180,7 @@ leftwm-config-git/
 leftwm-config/
 leftwm-theme-git/
 legendary/
+libadwaita-without-adwaita-git/
 libart-lgpl/
 libblocksruntime/
 libdispatch/
@@ -222,6 +224,7 @@ nixieclock/
 nodejs-nativefier/
 nomacs/
 nomacs-git/
+nomacs-qt6-git/
 nordic-kde-git/
 nordtray-bin/
 nordvpn-bin/
@@ -249,7 +252,6 @@ nwg-wrapper/
 nyrna/
 obmenu3/
 obmenu-generator/
-obsidian-icon-theme/
 ocs-url/
 octopi/
 oh-my-zsh-git/
@@ -271,9 +273,7 @@ pa-applet-git/
 pacback/
 pace/
 pace-git/
-pacseek-bin/
-pamac-tray-icon-plasma/
-papirus-linux-universe/
+pacseek-bin/papirus-linux-universe/
 papirus-nord/
 papirus-folders/
 papirus-folders-git/
@@ -371,6 +371,7 @@ refind-btrfs/
 replay-sorcery/
 retroarch-autoconfig-udev-git/
 river/
+rofi-lbonn-wayland/
 rofi-lbonn-wayland-only-git/
 rplay/
 rtl8821cu-morrownr-dkms-git/
@@ -466,6 +467,7 @@ wacom-settings-git/
 wacom-utility/
 waydroid/
 whitesur-icon-theme-git/
+wl-screenrec/
 wlprop/
 wlr-randr/
 wlr-randr-git/
@@ -514,7 +516,8 @@ xfce4-terminal-base16-colors-git/
 xstarter/
 xmobar-dynamic/
 yofi-bin/
-youtube-dl-gui-git/
+youtube-dl/
+youtube-dl-gui/
 zafiro-icon-theme/
 zsh-autosuggestions-git/
 zsh-fast-syntax-highlighting/
@@ -543,6 +546,15 @@ git clone https://github.com/xerolinux/xerolinux-mirrorlist
 git clone https://github.com/RebornOS-Developers/rebornos-mirrorlist.git
 
 git clone https://github.com/RebornOS-Developers/rebornos-keyring.git
+
+echo
+echo "###################################################################"
+echo " git pull and copy for EndeavourOS mirrorlist and keyring"
+
+cd /home/erik/Projects/IT\ is\ all\ Arch\ Linux/EndeavourOS/PKGBUILDS/
+git pull
+cp -v /home/erik/Projects/IT\ is\ all\ Arch\ Linux/EndeavourOS/PKGBUILDS/endeavouros-mirrorlist/* /home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_3th_party/endeavouros-mirrorlist/
+cp -v /home/erik/Projects/IT\ is\ all\ Arch\ Linux/EndeavourOS/PKGBUILDS/endeavouros-keyring/* /home/erik/ARCO/ARCOLINUX-PKGBUILD/arcolinux-pkgbuild-3party/ArcoLinux_3th_party/endeavouros-keyring/
 
 echo
 echo "###################################################################"

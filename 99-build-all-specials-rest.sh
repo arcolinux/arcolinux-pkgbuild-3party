@@ -199,7 +199,7 @@ xkb-switch-git
 xlunch-git
 xtitle-git
 yin-yang-git
-youtube-dl-gui-git
+youtube-dl-gui
 )
 
 #for name in $(ls -d */); do

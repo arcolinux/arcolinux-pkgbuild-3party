@@ -115,6 +115,8 @@ count=0
 
 
 directories=(
+endeavouros-mirrorlist
+endeavouros-keyring
 autotiling-git
 btrfs-assistant-git
 btrfsmaintenance-git
@@ -127,6 +129,7 @@ leftwm-theme-git
 mintstick-git
 oh-my-zsh-git
 oh-my-zsh-powerline-theme-git
+nomacs-git
 numix-circle-icon-theme-git/
 numix-gtk-theme-git/
 numix-icon-theme-git/
@@ -137,6 +140,7 @@ paru-git
 picom-git
 picom-ibhagwan-git
 picom-jonaburg-git
+sddm-git
 snap-pac-git
 snap-pac-grub
 snapper-rollback
